@@ -1,6 +1,11 @@
 require 'pry'
+require_relative './concerns/memorable'
+require_relative './concerns/paramable'
 
 class Song
+  extend Memorable
+  include Paramable
+
   attr_accessor :name
   attr_reader :artist
 
